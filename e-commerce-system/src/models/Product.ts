@@ -76,3 +76,11 @@ interface Product {
         this.images = images;
     }
 }
+
+
+class Products {
+    list: Product[];
+    total: number;
+    skip: number;
+    limit: number;
+}
