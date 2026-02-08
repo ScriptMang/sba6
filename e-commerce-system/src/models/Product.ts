@@ -42,6 +42,7 @@ class Product {
     _meta: meta;
     thumbnail: string;
     images: string[];
+   
     constructor(
         id: number, title: string, description: string,
         category: string, price: number, discountPercentage: number,
