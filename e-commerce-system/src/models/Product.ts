@@ -12,6 +12,12 @@ interface review {
     reviewerEmail: string;
 }
 
+interface meta {
+    createdAt: Date;
+    updatedAt: Date;
+    barcode: string;
+    qrCode: string;
+}
 
 class Product {
     id: number ;
@@ -33,7 +39,7 @@ class Product {
     reviews: review[]; // need a review interface type object
     returnPolicy: string;
     minOrderQuantity:  number;
-    meta: object; // need a meta interface type object
+    _meta: meta; // need a meta interface type object
     thumbnail: string;
     images: string[];
 }
