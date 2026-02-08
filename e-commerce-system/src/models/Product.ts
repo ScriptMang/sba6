@@ -4,7 +4,13 @@ interface dimension {
     depth: string;
 }
 
-
+interface review {
+    rating: number;
+    comment: string;
+    date: Date;
+    reviewerName: string;
+    reviewerEmail: string;
+}
 
 
 class Product {
@@ -24,7 +30,7 @@ class Product {
     warrantyInfo: string;
     shippingInfo: string;
     availabilityStatus: string;
-    reviews: string[]; // need a review interface type object
+    reviews: review[]; // need a review interface type object
     returnPolicy: string;
     minOrderQuantity:  number;
     meta: object; // need a meta interface type object
