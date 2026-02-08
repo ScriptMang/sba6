@@ -57,4 +57,13 @@ class Products {
         this.skip = skip;
         this.limit = limit;
     }
+
+    displayDetails(): void{
+        this.list.forEach(elem => {
+            console.log(elem)
+        });
+        console.log("total: " + this.total);
+        console.log("skip: " + this.skip);
+        console.log("limit: " + this.total);
+    }
 }
