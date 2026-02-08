@@ -32,14 +32,14 @@ class Product {
     brand: string;
     sku: string;
     weight: number;
-    dimensions:  dimension; // need a dimension interface type object
+    dimensions:  dimension;
     warrantyInfo: string;
     shippingInfo: string;
     availabilityStatus: string;
-    reviews: review[]; // need a review interface type object
+    reviews: review[]; 
     returnPolicy: string;
     minOrderQuantity:  number;
-    _meta: meta; // need a meta interface type object
+    _meta: meta;
     thumbnail: string;
     images: string[];
 }
