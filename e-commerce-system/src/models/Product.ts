@@ -1,3 +1,12 @@
+interface dimension {
+    width: number;
+    height: number;
+    depth: string;
+}
+
+
+
+
 class Product {
     id: number ;
     title: string;
@@ -11,7 +20,7 @@ class Product {
     brand: string;
     sku: string;
     weight: number;
-    dimensions:  object; // need a dimension interface type object
+    dimensions:  dimension; // need a dimension interface type object
     warrantyInfo: string;
     shippingInfo: string;
     availabilityStatus: string;
