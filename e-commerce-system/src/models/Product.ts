@@ -1,10 +1,10 @@
-interface dimension {
+interface Dimension {
     width: number;
     height: number;
     depth: string;
 }
 
-interface review {
+interface Review {
     rating: number;
     comment: string;
     date: Date;
@@ -12,7 +12,7 @@ interface review {
     reviewerEmail: string;
 }
 
-interface meta {
+interface Meta {
     createdAt: Date;
     updatedAt: Date;
     barcode: string;
@@ -32,14 +32,14 @@ interface Product {
     brand: string;
     sku: string;
     weight: number;
-    dimensions:  dimension;
+    dimensions:  Dimension;
     warrantyInfo: string;
     shippingInfo: string;
     availabilityStatus: string;
-    reviews: review[]; 
+    reviews: Review[]; 
     returnPolicy: string;
     minOrderQuantity:  number;
-    _meta: meta;
+    _meta: Meta;
     thumbnail: string;
     images: string[];
 }
