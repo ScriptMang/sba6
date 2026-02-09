@@ -1,3 +1,3 @@
-fetch('https://dummyjson.com/products')
-.then(resp => resp.json())
-.then(console.log);
+import { fetchAllProducts } from './services/apiService.js'
+
+fetchAllProducts();
