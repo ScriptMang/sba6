@@ -19,7 +19,7 @@ interface Meta {
     qrCode: string;
 }
 
-interface Product {
+class Product {
     id: number ;
     title: string;
     description: string;
@@ -45,13 +45,13 @@ interface Product {
 }
 
 
-class Products {
+class Products{
     list: Product[];
     total: number;
     skip: number;
     limit: number;
 
-     constructor(list: Product[], total: number, skip: number, limit: number){
+    constructor(list: Product[], total: number, skip: number, limit: number){
         this.list = list;
         this.total = total;
         this.skip = skip;

@@ -1,3 +1,5 @@
+import type { Product } from '../models/Product.js';
+
 export async function fetchAllProducts(){
     try{
         const response = await fetch("https://dummyjson.com/products");
