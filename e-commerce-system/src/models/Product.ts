@@ -50,9 +50,16 @@ class Product {
     }
      
     displayDetails(): void{
-        this.list.forEach(elem => {
-            console.log(elem)
-        });
+     console.log(JSON.stringify({
+        id: this.id,  title: this.title, description: this.description,
+        category: this.category, price: this.price, discountPercentage: this.discountPercentage,
+        rating: this.rating, stock: this.stock, tags: this.tags,
+        brand: this.brand, sku: this.sku, weight: this.weight,
+        dimensions: this.dimensions,  warrantyInfo: this.warrantyInfo, shippingInfo: this.shippingInfo,
+        availabilityStatus: this.availabilityStatus, reviews: this.reviews,  returnPolicy: this.returnPolicy,
+        minOrderQuantity:  this.minOrderQuantity, _meta: this._meta, thumbnail: this.thumbnail,
+        images: this.images,
+    }));
     }
 }
 
