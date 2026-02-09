@@ -20,27 +20,13 @@ interface Meta {
 }
 
 class Product {
-    id: number ;
-    title: string;
-    description: string;
-    category: string;
-    price: number;
-    discountPercentage: number;
-    rating: number;
-    stock: number;
-    tags: string[];
-    brand: string;
-    sku: string;
-    weight: number;
-    dimensions:  Dimension;
-    warrantyInfo: string;
-    shippingInfo: string;
-    availabilityStatus: string;
-    reviews: Review[]; 
-    returnPolicy: string;
-    minOrderQuantity:  number;
-    _meta: Meta;
-    thumbnail: string;
+    id: number; title: string; description: string;
+    category: string; price: number; discountPercentage: number;
+    rating: number; stock: number; tags: string[];
+    brand: string; sku: string; weight: number;
+    dimensions:  Dimension; warrantyInfo: string; shippingInfo: string;
+    availabilityStatus: string; reviews: Review[];  returnPolicy: string;
+    minOrderQuantity:  number; _meta: Meta; thumbnail: string;
     images: string[];
 
     constructor(
