@@ -94,7 +94,7 @@ export async function fetchProductByCategory(name: string) {
     }
 }
 
-async function addProduct(prod: Product){
+export async function addProduct(prod: Product){
     try {
         const resp = await fetch('https://dummyjson.com/products/add', {
             method: 'POST',

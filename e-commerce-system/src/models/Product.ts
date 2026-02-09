@@ -1,7 +1,7 @@
 interface Dimension {
     width: number;
     height: number;
-    depth: string;
+    depth: number;
 }
 
 interface Review {
