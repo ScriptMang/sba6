@@ -53,31 +53,15 @@ class Product {
         minOrderQuantity:  number, _meta: Meta, thumbnail: string,
         images: string[]
     ){
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.category = category;
-        this.price = price;
-        this.discountPercentage = discountPercentage;
-        this.rating = rating;
-        this.stock = stock;
-        this.tags = tags;
-        this.brand = brand;
-        this.sku = sku;
-        this.weight = weight;
-        this.dimensions = dimensions;
-        this.warrantyInfo = warrantyInfo;
-        this.shippingInfo = shippingInfo;
-        this.availabilityStatus = availabilityStatus;
-        this.reviews = reviews;
-        this.returnPolicy = returnPolicy;
-        this.minOrderQuantity = minOrderQuantity;
-        this._meta = _meta;
-        this.thumbnail = thumbnail;
+        this.id = id; this.title = title; this.description = description;
+        this.category = category; this.price = price; this.discountPercentage = discountPercentage;
+        this.rating = rating; this.stock = stock; this.tags = tags;
+        this.brand = brand; this.sku = sku; this.weight = weight;
+        this.dimensions = dimensions; this.warrantyInfo = warrantyInfo; this.shippingInfo = shippingInfo;
+        this.availabilityStatus = availabilityStatus; this.reviews = reviews; this.returnPolicy = returnPolicy;
+        this.minOrderQuantity = minOrderQuantity; this._meta = _meta; this.thumbnail = thumbnail;
         this.images = images;
     }
-
-
 }
 
 
