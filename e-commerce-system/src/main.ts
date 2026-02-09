@@ -1,3 +1,4 @@
-import { fetchAllProducts } from './services/apiService.js'
+import { fetchAllProducts,  fetchProduct } from './services/apiService.js'
 
 fetchAllProducts();
+fetchProduct(1);
