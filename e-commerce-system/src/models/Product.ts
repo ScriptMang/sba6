@@ -48,6 +48,12 @@ class Product {
         this.minOrderQuantity = minOrderQuantity; this._meta = _meta; this.thumbnail = thumbnail;
         this.images = images;
     }
+     
+    displayDetails(): void{
+        this.list.forEach(elem => {
+            console.log(elem)
+        });
+    }
 }
 
 
