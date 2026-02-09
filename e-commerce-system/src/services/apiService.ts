@@ -93,3 +93,30 @@ export async function fetchProductByCategory(name: string) {
         console.error("Fetch error: ", err);
     }
 }
+
+async function addProduct(prod: Product){
+    try {
+        const resp = await fetch('https://dummyjson.com/products/add', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                id: prod.id,  title: prod.title, description: prod.description,
+                category: prod.category, price: prod.price, discountPercentage: prod.discountPercentage,
+                rating: prod.rating, stock: prod.stock, tags: prod.tags,
+                brand: prod.brand, sku: prod.sku, weight: prod.weight,
+                dimensions: prod.dimensions,  warrantyInfo: prod.warrantyInfo, shippingInfo: prod.shippingInfo,
+                availabilityStatus: prod.availabilityStatus, reviews: prod.reviews,  returnPolicy: prod.returnPolicy,
+                minOrderQuantity:  prod.minOrderQuantity, meta: prod._meta, thumbnail: prod.thumbnail,
+                images: prod.images,
+            })
+        });
+        
+        if (!resp.ok) {
+            throw new Error("Network response was not ok");
+        }
+        const jsonData = await resp.json();
+        console.log(jsonData);
+    } catch(err){
+        console.error("Fetch error: ", err);
+    }
+}
