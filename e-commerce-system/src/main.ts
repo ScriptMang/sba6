@@ -6,3 +6,4 @@ ApiService.searchForProducts('phone');
 ApiService.fetchEachProductsCategories();
 ApiService.fetchProductCategoryList();
 ApiService.fetchProductByCategory('smartphones');
+ApiService.sortProductsByFieldAndOrder('title', true);
