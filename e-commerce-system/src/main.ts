@@ -1,8 +1,8 @@
-import { fetchAllProducts, fetchProduct, searchForProducts, fetchEachProductsCategories, fetchProductCategoryList, fetchProductByCategory } from './services/apiService.js'
+import * as ApiService from './services/apiService.js'
 
-fetchAllProducts();
-fetchProduct(1);
-searchForProducts('phone');
-fetchEachProductsCategories();
-fetchProductCategoryList();
-fetchProductByCategory('smartphones');
+ApiService.fetchAllProducts();
+ApiService.fetchProduct(1);
+ApiService.searchForProducts('phone');
+ApiService.fetchEachProductsCategories();
+ApiService.fetchProductCategoryList();
+ApiService.fetchProductByCategory('smartphones');
