@@ -49,3 +49,17 @@ export async function fetchEachProductsCategories() {
         console.error("Fetch error: ", err);
     }
 }
+
+
+export async function fetchProductCategoryList() {
+    try {
+        const resp =  await fetch(`https://dummyjson.com/products/category-list`);
+        if (!resp.ok) {
+            throw new Error("Network response was not ok");
+        }
+        const jsonData = await resp.json();
+        console.log(jsonData);
+    } catch(err){
+        console.error("Fetch error: ", err);
+    }
+}
