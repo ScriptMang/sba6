@@ -61,6 +61,11 @@ export class Product {
         images: this.images,
     }));
     }
+
+    getPriceWithDiscount(): number{
+        let discount = this.discountPercentage;
+        return this.price - (this.price * discount);
+    }
 }
 
 
