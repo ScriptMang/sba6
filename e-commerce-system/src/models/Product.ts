@@ -63,7 +63,7 @@ export class Product {
     }
 
     getPriceWithDiscount(): number{
-        let discount = this.discountPercentage * 100;
+        let discount = this.discountPercentage / 100;
         return this.price - (this.price * discount);
     }
 }
