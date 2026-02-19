@@ -1,5 +1,5 @@
 import  { Product } from '../models/Product.js';
-import {validateResponseOK} from '../utils/errorHandler.js';
+import {validateResponseOK, validateMinStock} from '../utils/errorHandler.js';
 
 export async function fetchAllProducts(){
     try{
@@ -17,6 +17,7 @@ export async function fetchProduct(id: number) {
         const resp =  await fetch(`https://dummyjson.com/products/${id}`);
         validateResponseOK(resp);
         const jsonData = await resp.json();
+        validateMinStock(jsonData["title"], jsonData["stock"]);
         console.log(jsonData);
     } catch(err){
         console.error("Fetch error: ", err);

@@ -1,11 +1,11 @@
 import * as ApiService from './services/apiService.js';
 import {Product} from './models/Product.js';
 import {calculateTax} from './utils/taxCalculator.js';
-import {NetworkError} from './utils/errorHandler.js';
+import {NetworkError, ValidationError} from './utils/errorHandler.js';
 
 try {
     // ApiService.fetchAllProducts();
-    // ApiService.fetchProduct(1);
+    // ApiService.fetchProduct(15);
     // ApiService.searchForProducts('phone');
     // ApiService.fetchEachProductsCategories();
     // ApiService.fetchProductCategoryList();
@@ -14,6 +14,8 @@ try {
 } catch (err) {
     if (err instanceof NetworkError) {
         console.error("Network Error:", err.message);
+    } else if (err instanceof ValidationError){
+        console.error("Validation Error:", err.message);
     } else if (err instanceof Error){
          console.error("Unknown Error:", err.message);
     }
