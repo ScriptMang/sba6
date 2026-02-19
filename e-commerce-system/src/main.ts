@@ -1,5 +1,6 @@
 import * as ApiService from './services/apiService.js';
 import {Product} from './models/Product.js';
+import {calculateTax} from './utils/taxCalculator.js';
 
 // ApiService.fetchAllProducts();
 // ApiService.fetchProduct(1);
@@ -36,3 +37,6 @@ const prod = new Product(
 );
 
 ApiService.addProduct(prod);
+prod.category = "groceries";
+const productTax =  calculateTax(prod);
+console.log(`The total tax for ${prod.title}: $`, productTax.toPrecision(3));
