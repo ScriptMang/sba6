@@ -1,14 +1,24 @@
 import * as ApiService from './services/apiService.js';
 import {Product} from './models/Product.js';
 import {calculateTax} from './utils/taxCalculator.js';
+import {NetworkError} from './utils/errorHandler.js';
 
-// ApiService.fetchAllProducts();
-// ApiService.fetchProduct(1);
-// ApiService.searchForProducts('phone');
-// ApiService.fetchEachProductsCategories();
-// ApiService.fetchProductCategoryList();
-// ApiService.fetchProductByCategory('smartphones');
-// ApiService.sortProductsByFieldAndOrder('title', true);
+try {
+    // ApiService.fetchAllProducts();
+    // ApiService.fetchProduct(1);
+    // ApiService.searchForProducts('phone');
+    // ApiService.fetchEachProductsCategories();
+    // ApiService.fetchProductCategoryList();
+    // ApiService.fetchProductByCategory('smartphones');
+    // ApiService.sortProductsByFieldAndOrder('title', true);
+} catch (err) {
+    if (err instanceof NetworkError) {
+        console.error("Network Error:", err.message);
+    } else if (err instanceof Error){
+         console.error("Unknown Error:", err.message);
+    }
+}
+
 
 const prod = new Product(
      1, "file-cabinet", "Office file cabinet meant for archiving documents.",
