@@ -1,5 +1,5 @@
-import {Product} from '../models/Product.js'
- 
-export function calculateDiscount(item: Product): number {
-    return item.price * (item.discountPercentage/100);
+
+
+export function calculateDiscount(price: number, discountPercentage: number): number {
+    return price * (discountPercentage/100);
 }

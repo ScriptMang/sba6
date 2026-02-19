@@ -1,3 +1,5 @@
+import {calculateDiscount} from '../utils/discountCalculator.js'
+
 interface Dimension {
     width: number;
     height: number;
@@ -63,8 +65,7 @@ export class Product {
     }
 
     getPriceWithDiscount(): number{
-        let discount = this.discountPercentage / 100;
-        return this.price - (this.price * discount);
+        return this.price - (calculateDiscount(this.price, this.discountPercentage));
     }
 }
 
