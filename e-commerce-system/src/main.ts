@@ -18,14 +18,14 @@ const prod = new Product(
          {
           "rating": 2,
           "comment": "Very unhappy with my purchase!",
-          "date": "2024-05-23T08:56:21.618Z",
+          "date": new Date("2024-05-23T08:56:21.618Z"),
           "reviewerName": "John Doe",
           "reviewerEmail": "john.doe@x.dummyjson.com"
         }],  
     "30 days return policy",
-    "50", {
-        "createdAt": "2024-05-23T08:56:21.618Z",
-        "updatedAt": "2024-05-23T08:56:21.618Z",
+    50, {
+        "createdAt": new Date("2024-05-23T08:56:21.618Z"),
+        "updatedAt": new Date("2024-05-23T08:56:21.618Z"),
         "barcode": "9164035109868",
         "qrCode": "..."
     }, 
